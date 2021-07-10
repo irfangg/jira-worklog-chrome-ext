@@ -1,0 +1,12 @@
+export const TOGGLE_AUTO_COMMENT = 'TOGGLE_AUTO_COMMENT';
+export const ADD_NEW_ROW = 'ADD_NEW_ROW';
+export const EDIT_ACTION = 'EDIT_ACTION';
+export const DELETE_ROW = 'DELETE_ROW';
+export const FILTER_BY = 'FILTER_BY';
+export const RESET_STORE = 'RESET_STORE';
+export const SAVE_DOMAIN = 'SAVE_DOMAIN';
+export const SAVE_LOGS = 'SAVE_LOGS';
+export const SAVE_STATUS = 'SAVE_STATUS';
+export const UPDATE_SAVED_LOGS = 'UPDATE_SAVED_LOGS';
+export const RESET_SAVED_LOGS = 'RESET_SAVED_LOGS';
+export const PUT_ERROR = 'PUT_ERROR';
