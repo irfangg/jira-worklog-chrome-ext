@@ -20,3 +20,5 @@ This is simple chrome extension to log your JIRA worklogs
 - Click on Load Unpacked and select this cloned folder `jira-worklog-chrome-ext` - which has manifest.json file.
 - The extension will be installed now with name `JIRA work log`
 - Visit JIRA web site and start logging your time :)
+
+If you like my work and want to support, you can [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/irfangg)
