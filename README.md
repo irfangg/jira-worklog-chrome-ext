@@ -12,7 +12,8 @@ This is simple chrome extension to log your JIRA worklogs
 - Filter by issue, in search
 
 ### Steps to load into chrome extention
-- Clone this repo `git clone https://github.com/irfangg/jira-worklog-chrome-ext.git` or download zip file then extract
+- Clone this repo `git clone https://github.com/irfangg/jira-worklog-chrome-ext.git` 
+Or download zip file from <a href='https://github.com/irfangg/jira-worklog-chrome-ext/releases/tag/v1.0.1-beta'>Release</a> then extract
 - Goto Chrome Settings using three dots on the top right corner
 - Then Select Extensions
 - You may directly open extensions by typing this url `chrome://extensions/`
@@ -20,3 +21,5 @@ This is simple chrome extension to log your JIRA worklogs
 - Click on Load Unpacked and select this cloned folder `jira-worklog-chrome-ext` - which has manifest.json file.
 - The extension will be installed now with name `JIRA work log`
 - Visit JIRA web site and start logging your time :)
+
+If you like my work and want to support, you can  [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/irfangg)
