@@ -18,7 +18,7 @@ Or download zip file from <a href='https://github.com/irfangg/jira-worklog-chrom
 - Then Select Extensions
 - You may directly open extensions by typing this url `chrome://extensions/`
 - Now, Enable developer mode
-- Click on Load Unpacked and select this cloned folder `jira-worklog-chrome-ext` - which has manifest.json file.
+- Click on Load Unpacked and select this cloned/extracted folder `jira-worklog-chrome-ext` - which has `manifest.json` file.
 - The extension will be installed now with name `JIRA work log`
 - Visit JIRA web site and start logging your time :)
 
