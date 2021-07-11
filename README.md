@@ -22,4 +22,4 @@ Or download zip file from <a href='https://github.com/irfangg/jira-worklog-chrom
 - The extension will be installed now with name `JIRA work log`
 - Visit JIRA web site and start logging your time :)
 
-If you like my work and want to support, you can [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/irfangg)
+If you like my work and want to support, you can  [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/irfangg)
