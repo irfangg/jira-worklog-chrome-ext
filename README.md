@@ -23,3 +23,11 @@ Or download zip file from <a href='https://github.com/irfangg/jira-worklog-chrom
 - Visit JIRA web site and start logging your time :)
 
 If you like my work and want to support, you can  [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/irfangg)
+
+
+
+<p align="center">
+    <a href="https://github.com/irfangg/jira-worklog-chrome-ext/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/irfangg/jira-worklog-chrome-ext/issues">Request Feature</a>
+</p>
