@@ -10,3 +10,4 @@ export const SAVE_STATUS = 'SAVE_STATUS';
 export const UPDATE_SAVED_LOGS = 'UPDATE_SAVED_LOGS';
 export const RESET_SAVED_LOGS = 'RESET_SAVED_LOGS';
 export const PUT_ERROR = 'PUT_ERROR';
+export const TOGGLE_SHOW_TASK = 'TOGGLE_SHOW_TASK';

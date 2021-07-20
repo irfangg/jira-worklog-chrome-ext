@@ -142,15 +142,17 @@ body {
   align-content: stretch;
   width: 100%;
 }
-.autoCommentContainer{
+
+.includeOptions{
   width: 98%;
   display: flex;
   justify-content: flex-start;
+  column-gap: 1em;
 }
-.autoCommentContainer > input {
+.includeOptions  input {
   margin: 1px 4px;
 }
-.autoCommentContainer > label {
+.includeOptions  label {
   vertical-align: top;
 }
 

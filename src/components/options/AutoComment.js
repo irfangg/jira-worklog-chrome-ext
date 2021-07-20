@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { TOGGLE_AUTO_COMMENT } from '../constants';
+import { TOGGLE_AUTO_COMMENT } from '../../constants';
 
 export default function AutoComment() {
-    const autoComment = useSelector(state => state.autoComment);
+    const autoComment = useSelector(state => state.options.autoComment);
     const dispatch = useDispatch();
     const handleAutoComment = () => {
         dispatch({

@@ -1,8 +1,9 @@
 import { handleActions } from 'redux-actions';
-import { toggleAutoComment } from './actions';
+import { toggleAutoComment, toggleShowTask } from './actions';
 
 const DEFAULT_STATE = {
-    autoComment: false
+    autoComment: false,
+    showTask: false
 };
 
 const handlers = {
@@ -12,6 +13,12 @@ const handlers = {
       autoComment : !state.autoComment
     };
   },
+  [toggleShowTask]: state => {
+    return {
+      ...state,
+      showTask : !state.showTask
+    };
+  }
 };
 
 export default handleActions(handlers, DEFAULT_STATE);

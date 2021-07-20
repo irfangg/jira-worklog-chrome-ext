@@ -1,11 +1,11 @@
 /*global chrome*/
 import React, {useEffect} from "react";
 import "./style.css";
-import NewRow from './components/workLog/NewRow'
-import AutoComment from "./components/AutoComment";
+import NewRow from './components/workLog/NewRow';
 import WorkLog from "./components/workLog";
 import Save from "./components/Save";
 import SavedLogs from "./components/SavedLogs";
+import Options from './components/options';
 import { useDispatch } from 'react-redux';
 import { SAVE_DOMAIN } from "./constants";
 import Footer from "./components/Footer";
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="App">
       <NewRow />
-      <AutoComment />
+      <Options />
       <WorkLog />
       <Save />
       <SavedLogs />

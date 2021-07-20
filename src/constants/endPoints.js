@@ -1,6 +1,6 @@
-export const getAutoSuggestURLDetails = (domain, query) => {
+export const getAutoSuggestURLDetails = ({domain, query, showSubTasks = false}) => {
     return {
-        url : `https://${domain}/rest/api/3/issue/picker?query=${query}`,
+        url : `https://${domain}/rest/api/3/issue/picker?query=${query}&showSubTasks=${showSubTasks}`,
         header: {
             method: 'GET',
             headers: {

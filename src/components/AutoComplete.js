@@ -9,33 +9,44 @@ const AutoComplete = (props)=> {
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [userInput, setUserInput] = useState(props.value);
-    const autoComment = useSelector(state => state.autoComment?.autoComment)
+    const autoComment = useSelector(state => state.options?.autoComment)
+    const showSubTasks = useSelector(state => state.options?.showTask)
     const domain = useSelector(state => state.home?.domain)
     const dispatch = useDispatch();
 
     const fetchData = (query) => {
-        console.log('query ',query, domain)
-        const {url, header} = getAutoSuggestURLDetails(domain, query)
-        query && fetch(url, header)
-            .then(response => response.json())
-            .then(data => {
+      let fetchURL;
+      const {url, header} = getAutoSuggestURLDetails({domain, query, showSubTasks})
+      if(process.env.NODE_ENV === 'development'){
+        fetchURL = 'http://localhost:3000/sections';
+        console.log('query ',query, domain, process.env.NODE_ENV, url, fetchURL)
+      }else{
+        fetchURL = url;
+      }
+      query && fetch(fetchURL, header)
+          .then(response => response.json())
+          .then(data => {
+            if(process.env.NODE_ENV === 'development'){
                 console.log('data ',data, domain)
+                const fakeDataList = data?.[0]?.issues.length>0 ? data?.[0].issues : [];
+                setFilteredSuggestions(fakeDataList)
+              }else{
                 const dataList = data?.sections?.[0]?.issues.length>0 ? data.sections?.[0].issues : [];
-                // console.log('dataList ', dataList)
                 setFilteredSuggestions(dataList)
-                setActiveSuggestion(0);
-                setShowSuggestions(true)
-            })
-            .catch(err => {
-                console.error(err);
-                setFilteredSuggestions([])
-                setShowSuggestions(false)
-            });
+              }
+              setActiveSuggestion(0);
+              setShowSuggestions(true)
+          })
+          .catch(err => {
+              console.error(err);
+              setFilteredSuggestions([])
+              setShowSuggestions(false)
+          });
     }
    
     const processChanges = useMemo(() => {
         return debounce_loading(fetchData, 300);
-    }, []);
+    }, [showSubTasks]);
 
     const addAutoComment = (issue)=>{
         if(autoComment){
@@ -44,7 +55,7 @@ const AutoComplete = (props)=> {
                 payload: {
                   id: props.id,
                   name: 'comment',
-                  value: 'worked on issue '+issue
+                  value: issue && 'worked on issue '+issue
                 }
             });
         }
@@ -110,7 +121,7 @@ const AutoComplete = (props)=> {
     if (showSuggestions && userInput) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <ul className="suggestions">
+          <ul className='suggestions'>
             {filteredSuggestions.map((suggestion, index) => {
               let className;
 
@@ -151,7 +162,7 @@ const AutoComplete = (props)=> {
                 placeholder='Issue'
                 onKeyDown={onKeyDown}
             />
-            {suggestionsListComponent}
+              {suggestionsListComponent}
         </>
     )
 }
