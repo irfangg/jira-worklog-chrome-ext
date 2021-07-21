@@ -19,12 +19,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "craco build",
+    "build": "craco build && cp README.md build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d build"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.146",
+    "gh-pages": "^3.2.3",
     "react-scripts": "latest"
   },
   "browserslist": {
