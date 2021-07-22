@@ -4,28 +4,28 @@ import { nanoid } from 'nanoid';
 
 const DEFAULT_STATE = {
   workLogItems: [],
-  filterBy: {}
+  filterBy: {},
 };
 
 const handlers = {
-  [addNewRow]: state => {
+  [addNewRow]: (state) => {
     const newRow = {
       id: nanoid(),
       issue: '',
       timeSpent: '',
       logDate: `${new Date().toISOString().split('T')[0]}`,
-      comment: ''
+      comment: '',
     };
     const newWorkLog = state.workLogItems?.slice() || [];
     newWorkLog.push(newRow);
     return {
       ...state,
-      workLogItems: newWorkLog
+      workLogItems: newWorkLog,
     };
   },
   [onEditIssue]: (state, action) => {
     const { id, value, name } = action.payload;
-    const updateWorkLog = state.workLogItems.map(row => {
+    const updateWorkLog = state.workLogItems.map((row) => {
       if (row.id === id) {
         if (name === 'issue') {
           row.issue = value;
@@ -33,7 +33,7 @@ const handlers = {
           row.timeSpent = value;
         } else if (name === 'comment') {
           row.comment = value;
-        } else if(name === 'logDate'){
+        } else if (name === 'logDate') {
           row.logDate = value;
         }
       }
@@ -41,29 +41,29 @@ const handlers = {
     });
     return {
       ...state,
-      workLogItems: updateWorkLog
+      workLogItems: updateWorkLog,
     };
   },
   [delRow]: (state, action) => {
     const { id } = action.payload;
-    const updateWorkLog = state.workLogItems.filter(row => row.id !== id);
+    const updateWorkLog = state.workLogItems.filter((row) => row.id !== id);
     return {
       ...state,
-      workLogItems: updateWorkLog
+      workLogItems: updateWorkLog,
     };
   },
   [filterBy]: (state, action) => {
     const { value, name } = action.payload;
     return {
       ...state,
-      filterBy: { value, name }
+      filterBy: { value, name },
     };
   },
   [resetStore]: () => {
     return {
-      ...DEFAULT_STATE
+      ...DEFAULT_STATE,
     };
-  }
+  },
 };
 
 export default handleActions(handlers, DEFAULT_STATE);

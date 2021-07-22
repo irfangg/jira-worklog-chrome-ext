@@ -5,4 +5,4 @@ function* rootSaga() {
   yield all([saveLogsSaga()]);
 }
 
-export default rootSaga;  
+export default rootSaga;
