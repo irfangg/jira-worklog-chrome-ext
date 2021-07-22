@@ -9,5 +9,5 @@ export default combineReducers({
   worklogs,
   options,
   home,
-  loggedDetails: saveReducer
+  loggedDetails: saveReducer,
 });

@@ -2,15 +2,16 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { FILTER_BY } from '../../constants';
 
-export default props => {
+// eslint-disable-next-line react/display-name
+export default (props) => {
   const dispatch = useDispatch();
-  const onFilterIssue = e => {
+  const onFilterIssue = (e) => {
     dispatch({
       type: FILTER_BY,
       payload: {
         value: e.target.value,
-        name: props.name
-      }
+        name: props.name,
+      },
     });
   };
   return (
@@ -19,7 +20,7 @@ export default props => {
         placeholder={props.placeholder}
         name={props.name}
         onChange={onFilterIssue}
-        className='class_search'
+        className="class_search"
       />
     </>
   );

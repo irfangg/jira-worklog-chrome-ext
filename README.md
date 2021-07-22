@@ -1,5 +1,7 @@
 # jira-worklog-chrome-ext
-
+![](https://github.com/irfangg/jira-worklog-chrome-ext/workflows/Continuous%20Integration/badge.svg)
+![](https://github.com/irfangg/jira-worklog-chrome-ext/workflows/Continuous%20Delivery/badge.svg)
+ 
 This is simple chrome extension to log your JIRA worklogs
 
 ![alt text](https://github.com/irfangg/jira-worklog-chrome-ext/blob/main/screenshot.png?raw=true)

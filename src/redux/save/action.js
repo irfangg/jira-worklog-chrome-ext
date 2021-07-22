@@ -5,4 +5,3 @@ export const saveLogs = createAction(SAVE_LOGS);
 export const setSaveStatus = createAction(SAVE_STATUS);
 export const updateSavedLogs = createAction(UPDATE_SAVED_LOGS);
 export const resetSavedLogs = createAction(RESET_SAVED_LOGS);
-
