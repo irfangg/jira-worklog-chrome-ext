@@ -8,7 +8,8 @@ This is simple chrome extension to log your JIRA worklogs
 
 ### Features
 - Add time spent and comments for a issue
-- Add multiple issues
+- Add work logs for multiple issues
+- Show Story/bug/tasks in suggestions
 - Once logged, it will give option to delete added worklog, in case you changed your mind
 - Auto comment - Once checked on, it will prefix "worked on issue" to issue id in comments
 - Filter by issue, in search
