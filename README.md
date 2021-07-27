@@ -16,7 +16,7 @@ This is simple chrome extension to log your JIRA worklogs
 
 ### Steps to load into chrome extention
 - Clone this repo `git clone https://github.com/irfangg/jira-worklog-chrome-ext.git` 
-Or download zip file from <a href='https://github.com/irfangg/jira-worklog-chrome-ext/releases/tag/v1.0.1-beta'>Release</a> then extract
+Or download zip file from <a href='https://github.com/irfangg/jira-worklog-chrome-ext/releases/tag/v1.0.1-beta.1'>Release</a> then extract
 - Goto Chrome Settings using three dots on the top right corner
 - Then Select Extensions
 - You may directly open extensions by typing this url `chrome://extensions/`
