@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "craco build && cp screenshot.png README.md LICENSE build",
+    "build": "craco build && cp screenshot.png README.md LICENSE .gitatrributes build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "INLINE_RUNTIME_CHUNK=false && npm run build",
